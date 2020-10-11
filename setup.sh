@@ -48,7 +48,7 @@ echo "Setting password..."
 passwd
 
 #echo "Installing microcode..."
-#pacman -S --no-confirm amd-ucode
+#pacman -S --noconfirm amd-ucode
 
 echo "Setting up bootloader..."
 DIRECTORY=/sys/firmware/efi
@@ -60,4 +60,4 @@ else
 fi
 
 echo "Installing extra packages"
-pacman -S --no-confirm git man
+pacman -S --noconfirm git man
