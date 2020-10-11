@@ -7,6 +7,12 @@ echo "██╔══██║██╔══██╗██║     ██╔═
 echo "██║  ██║██║  ██║╚██████╗██║  ██║    ███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗    ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    ███████║╚██████╗██║  ██║██║██║        ██║   "
 echo "╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝    ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   "
 echo "version 0.0.1"
+echo ""
 
-echo "\nSetting the keyboard layout"
+echo "Setting the keyboard layout..."
 loadkeys uk
+
+echo "Checking internet connection..."
+ping -c 10 archlinux.org
+echo "Please verify that this device is connected to the internet and... "
+read -p "... press enter to continue or CTRL+C to cancel install"
