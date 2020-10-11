@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Before continuing, please verify that you are chrooted into the Arch install and..."
+read -p "... press enter to continue or CTRL+C to cancel install"
+
 echo " █████╗ ██████╗  ██████╗██╗  ██╗    ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗    ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗"
 echo "██╔══██╗██╔══██╗██╔════╝██║  ██║    ██║     ██║████╗  ██║██║   ██║╚██╗██╔╝    ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         ██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝"
 echo "███████║██████╔╝██║     ███████║    ██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝     ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         ███████╗██║     ██████╔╝██║██████╔╝   ██║   "
@@ -8,15 +11,6 @@ echo "██║  ██║██║  ██║╚██████╗██║ 
 echo "╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝    ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   "
 echo "version 0.0.1"
 echo ""
-
-echo "Installing base Arch on /mnt"
-pacstrap /mnt base linux linux-firmware
-
-echo "Generating fstab"
-genfstab -U /mnt >> /mnt/etc/fstab
-
-echo "chrooting into new install"
-arch-chroot /mnt
 
 echo "Setting the keyboard layout..."
 loadkeys uk
